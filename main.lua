@@ -11,7 +11,7 @@ blue_theme = {
     }
 }
 
-do_gui = require "test.color_ramp"
+do_gui = require "examples.menu"
 
 function lerp(min, max, s)
     return min * (1 - s) + max * s
