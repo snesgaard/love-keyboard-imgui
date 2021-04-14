@@ -1,5 +1,7 @@
-local rectangle = require("rectangle").create
-local text_format = require "text"
+local BASE = (...):match('(.-)[^%.]+$')
+
+local rectangle = require(BASE .. "rectangle").create
+local text_format = require(BASE .. "text")
 
 local button = {}
 button.__index = button

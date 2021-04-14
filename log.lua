@@ -1,4 +1,6 @@
-local text = require "text"
+local BASE = (...):match('(.-)[^%.]+$')
+
+local text = require(BASE .. "text")
 
 local log = {}
 

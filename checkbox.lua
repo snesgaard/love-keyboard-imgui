@@ -1,6 +1,8 @@
-local button = require "button"
-local rectangle = require "rectangle"
-local text_format = require "text"
+local BASE = (...):match('(.-)[^%.]+$')
+
+local button = require(BASE .. "button")
+local rectangle = require(BASE .. "rectangle")
+local text_format = require(BASE .. "text")
 
 local checkbox = {}
 

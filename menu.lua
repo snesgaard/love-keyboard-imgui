@@ -1,6 +1,8 @@
-local rectangle = require "rectangle"
-local lume = require "lume"
-local timer = require "timer"
+local BASE = (...):match('(.-)[^%.]+$')
+
+local rectangle = require(BASE .. "rectangle")
+local lume = require(BASE .. "lume")
+local timer = require(BASE .. "timer")
 
 local menu = {}
 

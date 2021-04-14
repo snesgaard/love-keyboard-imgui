@@ -1,7 +1,9 @@
-local layout = require "layout"
-local button = require "button"
-local stack = require "stack"
-local theme = require "theme"
+local BASE = (...):match('(.-)[^%.]+$')
+
+local layout = require(BASE .. "layout")
+local button = require(BASE .. "button")
+local stack = require(BASE .. "stack")
+local theme = require(BASE .. "theme")
 
 local congui = {}
 congui.__index = congui

@@ -1,5 +1,7 @@
-local rectangle = require "rectangle"
-local stack = require "stack"
+local BASE = (...):match('(.-)[^%.]+$')
+
+local rectangle = require(BASE .. "rectangle")
+local stack = require(BASE .. "stack")
 
 local layout = {}
 layout.__index = layout
