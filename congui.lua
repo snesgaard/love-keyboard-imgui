@@ -69,15 +69,10 @@ function congui:handle_events(id)
         if f then return f(self, id, ...) end
     end
 
-    local to_remove = {}
-
     for index, event in ipairs(self.events) do
-        if call_event(unpack(event)) then table.insert(to_remove, index) end
-    end
-
-    for i = #to_remove, 1, -1 do
-        local index = to_remove[i]
-        table.remove(self.events, index)
+        if not event.consumed then
+            if call_event(unpack(event)) then event.consumed = true end
+        end
     end
 end
 
